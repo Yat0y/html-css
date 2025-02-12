@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos With HTML5</title>
+</head>
+<body>
+    <h1>Inserting Locally Hosted Videos</h1>
+    <p>That video is hosted on my own server.</p>
+
+    <video src="media/meu-video.mp4" width="550" controls></video>
+
+    <video width="550" poster="images/limoes-capa.png" controls autoplay loop>
+        <source src="media/meu-video.mp4" type="video/mp4">
+        <source src="#" type="video/mp4"> <!-- MKV -->
+        <source src="#" type="video/webm">
+        <source src="#" type="video/ogg">
+        <p>Unffortunaly, your browser does not support vieo playback. <a href="media/meu-video.mp4">
+            Click here to download the video.</a>
+        </p>
+    </video>
+
+    <h1>Inserting Youtube Videos</h1>
+    <iframe width="550" height="315" src="https://www.youtube.com/embed/TOt4XtFI384?si=W5nDZPpv6-vfzB5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
