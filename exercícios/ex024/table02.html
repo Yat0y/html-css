@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        thead, tfoot {
+            background-color: lightslategray;
+            color: white;
+            font-size: 1.2em;
+            border: 2px solid black;
+        }
+        
+        tr.line {
+            background-color: lightgray;
+        }
+
+        td, th {
+            padding: 15px;
+        }
+
+        td {
+            font-weight: 600;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        td.number {
+            font-weight: normal;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usage Of Big Tables</h1>
+    <!-- 
+        Anatomy For Big Tables
+        Table
+            THead
+                TR, TD, TH
+            TBody
+                TR, TD, TH
+            TFoot
+                TR, TD, TH
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sao Paulo</td>
+                <td class="number">45.973.190</td>
+            </tr>
+            <tr class="line">
+                <td>Minas Gerais</td>
+                <td class="number">21.322.692</td>
+            </tr>
+            <tr>
+                <td>Rio De Janeiro</td>
+                <td class="number">17.219.679</td>
+            </tr>
+            <tr class="line">
+                <td>Bahia</td>
+                <td class="number">14.850.513</td>
+            </tr>
+            <tr>
+                <td>Parana</td>
+                <td class="number">11.824.665</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Total Of Inhabtants</th>
+                <td class="number"><strong>111.190.739</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
