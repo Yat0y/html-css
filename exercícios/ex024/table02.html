@@ -14,6 +14,14 @@
             height: 500px;
             border: 2px solid black;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         thead, tfoot {
@@ -23,7 +31,13 @@
             border: 2px solid black;
         }
         
-        tr.line {
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: lightslategray;
+        }
+
+        tbody > tr:nth-child(2n) {
             background-color: lightgray;
         }
 
@@ -48,6 +62,7 @@
     <!-- 
         Anatomy For Big Tables
         Table
+            Caption
             THead
                 TR, TD, TH
             TBody
@@ -56,10 +71,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>Population</caption>
+        
         <thead>
             <tr>
-                <th>State</th>
-                <th>Population</th>
+                <th scope="col">State</th>
+                <th scope="col" style="width: 55px;">Population</th>
             </tr>
         </thead>
 
@@ -88,7 +105,7 @@
 
         <tfoot>
             <tr>
-                <th>Total Of Inhabtants</th>
+                <th scope="row">Total Of Inhabtants</th>
                 <td class="number"><strong>111.190.739</strong></td>
             </tr>
         </tfoot>
